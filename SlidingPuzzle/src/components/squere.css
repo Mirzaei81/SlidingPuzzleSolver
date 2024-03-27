@@ -1,0 +1,56 @@
+.box:hover{
+   --color:theme(colors.text) ;
+   text-shadow: var(--color) 1px 0 10px ;
+   cursor: pointer;
+}
+
+.box{
+    transition: transform 0.5s ease;
+    -o-transition: -o-transform 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    -moz-transition: -moz-transform 0.5s ease;
+}
+
+.wiggle{
+    animation: 1s 1 normal wiggler ;
+}
+
+.left{
+    transform: translateX(100%);
+    -o-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+}
+.right{
+    transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+}
+.down{
+    transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+}
+.up{
+    transform: translateY(100%);
+    -o-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+}
+@keyframes wiggler {
+    25%{
+        transform:rotate(5deg);
+    }
+    50%{
+        transform:rotate(-10deg);
+    }
+    75%{
+        transform:rotate(5deg);
+    }
+    100%{
+        transform: rotate(0deg) ;
+    }
+    
+}
